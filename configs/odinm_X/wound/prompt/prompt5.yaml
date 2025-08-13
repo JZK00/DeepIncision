@@ -1,0 +1,5 @@
+# use for grounding model
+DATASETS:
+  # CAPTION_PROMPT: '[{"prefix": "", "name": "diabetic foot wound", "suffix": " in  foot"}]'
+
+  CAPTION_PROMPT: '[{"prefix": "multiple ", "name": "wound", "suffix": " in human skin"},]'

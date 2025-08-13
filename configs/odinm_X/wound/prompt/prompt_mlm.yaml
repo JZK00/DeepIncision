@@ -1,0 +1,6 @@
+# use for grounding model
+DATASETS:
+    CAPTION_PROMPT: '[{"prefix": "", "name": "yellow round small dot", "suffix": ""},
+                                              {"prefix": "", "name": "brown round cell", "suffix": ""},
+                                              {"prefix": "", "name": "red irregular cell", "suffix": ""}
+                                              ]'

@@ -1,0 +1,74 @@
+MODEL:
+  ATSS:
+    NUM_CLASSES: 8 # these fields are not used; just a placeholder
+  FCOS:
+    NUM_CLASSES: 8
+  ROI_BOX_HEAD:
+    NUM_CLASSES: 8
+  DYHEAD:
+    NUM_CLASSES: 8
+
+# use for grounding model
+DATASETS:
+  GENERAL_COPY: 16
+
+  REGISTER:
+    test:
+      ann_file: DATASET/SurginDataset/annotations/instances_wound.json
+      img_dir: DATASET/SurginDataset/images
+    train_1:
+      ann_file: DATASET/SurginDataset/annotations/instances_train_1.json
+      img_dir: DATASET/SurginDataset/images
+    train_2:
+      ann_file: DATASET/SurginDataset/annotations/instances_train_2.json
+      img_dir: DATASET/SurginDataset/images
+    train_3:
+      ann_file: DATASET/SurginDataset/annotations/instances_train_3.json
+      img_dir: DATASET/SurginDataset/images
+    train_4:
+      ann_file: DATASET/SurginDataset/annotations/instances_train_4.json
+      img_dir: DATASET/SurginDataset/images
+    train_5:
+      ann_file: DATASET/SurginDataset/annotations/instances_train_5.json
+      img_dir: DATASET/SurginDataset/images
+    val_1:
+      ann_file: DATASET/SurginDataset/annotations/instances_val_1.json
+      img_dir: DATASET/SurginDataset/images
+    val_2:
+      ann_file: DATASET/SurginDataset/annotations/instances_val_2.json
+      img_dir: DATASET/SurginDataset/images
+    val_3:
+      ann_file: DATASET/SurginDataset/annotations/instances_val_3.json
+      img_dir: DATASET/SurginDataset/images
+    val_4:
+      ann_file: DATASET/SurginDataset/annotations/instances_val_4.json
+      img_dir: DATASET/SurginDataset/images
+    val_5:
+      ann_file: DATASET/SurginDataset/annotations/instances_val_5.json
+      img_dir: DATASET/SurginDataset/images
+
+  TEST: ("test",)
+  TRAIN: ("train_5",)
+  # DATASETS:
+  #   TRAIN: ("object365_dt_train", "mixed_train_no_coco", "flickr30k_train", )
+  #   TEST: ("coco_2017_val", )
+  DISABLE_SHUFFLE: False
+  ADD_DET_PROMPT: False
+  RANDOM_SAMPLE_NEG: 85
+  CONTROL_PROB: (0.0, 0.0, 0.5, 0.0)
+
+  SEPARATION_TOKENS: ". "
+
+#INPUT:
+#  PIXEL_MEAN: [ 103.530, 116.280, 123.675 ]
+#  PIXEL_STD: [ 57.375, 57.120, 58.395 ]
+#  MIN_SIZE_TRAIN: 512
+#  MAX_SIZE_TRAIN: 512
+#  MIN_SIZE_TEST: 512
+#  MAX_SIZE_TEST: 512
+
+DATALOADER:
+  SIZE_DIVISIBILITY: 32
+  ASPECT_RATIO_GROUPING: False
+TEST:
+  IMS_PER_BATCH: 8

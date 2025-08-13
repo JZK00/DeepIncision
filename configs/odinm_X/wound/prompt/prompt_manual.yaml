@@ -1,0 +1,10 @@
+# use for grounding model
+DATASETS:
+    CAPTION_PROMPT: '[{"prefix": "", "name": "No abnormal", "suffix": ""},
+                                              {"prefix": "", "name": "Flare", "suffix": ""},
+                                              {"prefix": "", "name": "Purulent", "suffix": ""},
+                                              {"prefix": "", "name": "Scab", "suffix": ""},
+                                              {"prefix": "", "name": "Tension blisters", "suffix": ""},
+                                              {"prefix": "", "name": "Disruption of wound", "suffix": ""},
+                                              {"prefix": "", "name": "Skin ecchymosis around incision", "suffix": ""}
+                                              ]'

@@ -1,0 +1,11 @@
+# use for grounding model
+DATASETS:
+  # CAPTION_PROMPT: '[{"prefix": "", "name": "diabetic foot ulcer", "suffix": ""}]'
+  # CAPTION_PROMPT: '[{"prefix": "", "name": "Mal perforans", "suffix": " in foot"}]'
+
+  CAPTION_PROMPT: '[{"prefix": "", "name": "thrombocyte or blood platelet", "suffix": ""},
+                                              {"prefix": "", "name": "erythrocyte or red blood corpuscle", "suffix": ""},
+                                              {"prefix": "", "name": "leukocyte or white blood corpuscle", "suffix": ""}
+                                              ]'
+
+

@@ -1,0 +1,6 @@
+# use for grounding model
+DATASETS:
+    CAPTION_PROMPT: '[{"prefix": "", "name": "platelet", "suffix": ""},
+                                              {"prefix": "", "name": "red blood cell", "suffix": ""},
+                                              {"prefix": "", "name": "white blood cell", "suffix": ""}
+                                              ]'

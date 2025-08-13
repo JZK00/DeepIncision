@@ -1,0 +1,81 @@
+MODEL:
+  ATSS:
+    NUM_CLASSES: 8 # these fields are not used; just a placeholder
+  FCOS:
+    NUM_CLASSES: 8
+  ROI_BOX_HEAD:
+    NUM_CLASSES: 8
+  DYHEAD:
+    NUM_CLASSES: 8
+
+# use for grounding model
+DATASETS:
+  GENERAL_COPY: 16
+
+  REGISTER:
+    test:
+      ann_file: DATASET/SurginDataset/annotations/instances_test.json
+      img_dir: DATASET/SurginDataset/images
+    train_1:
+      ann_file: DATASET/SurginDataset/annotations/instances_train_1.json
+      img_dir: DATASET/SurginDataset/images
+    train_2:
+      ann_file: DATASET/SurginDataset/annotations/instances_train_2.json
+      img_dir: DATASET/SurginDataset/images
+    train_3:
+      ann_file: DATASET/SurginDataset/annotations/instances_train_3.json
+      img_dir: DATASET/SurginDataset/images
+    train_4:
+      ann_file: DATASET/SurginDataset/annotations/instances_train_4.json
+      img_dir: DATASET/SurginDataset/images
+    train_5:
+      ann_file: DATASET/SurginDataset/annotations/instances_train_5.json
+      img_dir: DATASET/SurginDataset/images
+    val_1:
+      ann_file: DATASET/SurginDataset/annotations/instances_val_1.json
+      img_dir: DATASET/SurginDataset/images
+    val_2:
+      ann_file: DATASET/SurginDataset/annotations/instances_val_2.json
+      img_dir: DATASET/SurginDataset/images
+    val_3:
+      ann_file: DATASET/SurginDataset/annotations/instances_val_3.json
+      img_dir: DATASET/SurginDataset/images
+    val_4:
+      ann_file: DATASET/SurginDataset/annotations/instances_val_4.json
+      img_dir: DATASET/SurginDataset/images
+    val_5:
+      ann_file: DATASET/SurginDataset/annotations/instances_val_5.json
+      img_dir: DATASET/SurginDataset/images
+
+  TEST: ("test",)
+  TRAIN: ("train_2",)
+  # DATASETS:
+  #   TRAIN: ("object365_dt_train", "mixed_train_no_coco", "flickr30k_train", )
+  #   TEST: ("coco_2017_val", )
+  DISABLE_SHUFFLE: False
+  ADD_DET_PROMPT: False
+  RANDOM_SAMPLE_NEG: 85
+  CONTROL_PROB: (0.0, 0.0, 0.5, 0.0)
+
+  SEPARATION_TOKENS: ". "
+
+INPUT:
+ PIXEL_MEAN: [ 103.530, 116.280, 123.675 ]
+ PIXEL_STD: [ 57.375, 57.120, 58.395 ]
+ MIN_SIZE_TRAIN: 800
+ MAX_SIZE_TRAIN: 1333
+ MIN_SIZE_TEST: 800
+ MAX_SIZE_TEST: 1333
+
+DATALOADER:
+  SIZE_DIVISIBILITY: 32
+  ASPECT_RATIO_GROUPING: False
+TEST:
+  IMS_PER_BATCH: 8
+  # USE_MULTISCALE: True
+  # FLIP: True  # 启用水平翻转
+  # SCALES: (1000,)  # short side 多尺度 (600, 800, 1000, 1200)
+  # RANGES: ((64, 10000), ) # 每个scale配一个范围
+  # MAX_SIZE: 2000  # long side 最大限制
+  # PRE_NMS_TOP_N: 1000
+  # TH: 0.5
