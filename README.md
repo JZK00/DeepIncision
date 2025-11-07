@@ -45,15 +45,3 @@ python metric_em.py
 based on: GLIP: Grounded Language-Image Pre-training
 
 
-## Citation
-If you find this repo useful for your research, please consider citing our papers:
-
-```bibtex
-@article{zhaovision,
-  title={Vision-language foundation model-driven efficient recognition and home-based management of surgical incisions},
-  author={Zhao, Chunlin and Yi, Huahui and Jiang, Zekun and Yang, Mei and Yang, Yi and Guo, Yuchen and Wang, Jing and Yuan, Linyan and Chen, Xiao and Yang, Xue and others},
-  journal={International Journal of Surgery},
-  pages={10--1097},
-  publisher={LWW}
-}
-```
