@@ -3,7 +3,7 @@ VLFM-Driven Efficient Recognition of Surgical Incisions
 
 
 ***Environment***
-This repo requires Pytorch>=1.9 and torchvision. We recommand using docker to setup the environment. You can use this pre-built docker image ``docker pull pengchuanzhang/maskrcnn:ubuntu18-py3.7-cuda10.2-pytorch1.9`` or this one ``docker pull pengchuanzhang/pytorch:ubuntu20.04_torch1.9-cuda11.3-nccl2.9.9`` depending on your GPU.
+This repo requires Pytorch>=1.9 and torchvision. We recommend using Docker to setup the environment. You can use this pre-built Docker image ``docker pull pengchuanzhang/maskrcnn:ubuntu18-py3.7-cuda10.2-pytorch1.9`` or this one ``docker pull pengchuanzhang/pytorch:ubuntu20.04_torch1.9-cuda11.3-nccl2.9.9`` depending on your GPU.
 
 Then install the following packages:
 ```
@@ -40,8 +40,20 @@ python metric.py
 emsemble see
 ```
 python metric_em.py
+
+
+based on: GLIP: Grounded Language-Image Pre-training
+
+
+## Citation
+If you find this repo useful for your research, please consider citing our papers:
+
+```bibtex
+@article{zhaovision,
+  title={Vision-language foundation model-driven efficient recognition and home-based management of surgical incisions},
+  author={Zhao, Chunlin and Yi, Huahui and Jiang, Zekun and Yang, Mei and Yang, Yi and Guo, Yuchen and Wang, Jing and Yuan, Linyan and Chen, Xiao and Yang, Xue and others},
+  journal={International Journal of Surgery},
+  pages={10--1097},
+  publisher={LWW}
+}
 ```
-
-
-
-based on: GLIP: Grounded Language-Image Pre-training  
